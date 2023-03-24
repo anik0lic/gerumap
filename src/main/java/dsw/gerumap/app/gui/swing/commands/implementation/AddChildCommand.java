@@ -1,7 +1,7 @@
 package dsw.gerumap.app.gui.swing.commands.implementation;
 
 import dsw.gerumap.app.gui.swing.commands.AbstractCommand;
-import dsw.gerumap.app.gui.swing.maprepository.composite.MapNodeComposite;
+import dsw.gerumap.app.maprepository.composite.MapNodeComposite;
 import dsw.gerumap.app.gui.swing.tree.model.MapTreeItem;
 
 import java.io.IOException;

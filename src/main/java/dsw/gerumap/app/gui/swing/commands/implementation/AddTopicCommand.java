@@ -1,9 +1,9 @@
 package dsw.gerumap.app.gui.swing.commands.implementation;
 
 import dsw.gerumap.app.gui.swing.commands.AbstractCommand;
-import dsw.gerumap.app.gui.swing.workspace.MapView;
-import dsw.gerumap.app.gui.swing.workspace.panel.Topic;
-import dsw.gerumap.app.gui.swing.workspace.panel.painters.ElementPainter;
+import dsw.gerumap.app.gui.swing.workspace.view.MapView;
+import dsw.gerumap.app.gui.swing.workspace.elements.Topic;
+import dsw.gerumap.app.gui.swing.workspace.elements.painters.ElementPainter;
 
 import java.io.IOException;
 

@@ -2,11 +2,11 @@ package dsw.gerumap.app;
 
 import dsw.gerumap.app.core.*;
 import dsw.gerumap.app.gui.swing.SwingGui;
-import dsw.gerumap.app.gui.swing.error.ConsoleLogger;
-import dsw.gerumap.app.gui.swing.error.FileLogger;
-import dsw.gerumap.app.gui.swing.maprepository.MapRepositoryImplementation;
-import dsw.gerumap.app.gui.swing.message.MessageGeneratorImplemetation;
-import dsw.gerumap.app.gui.swing.serializer.GsonSerializer;
+import dsw.gerumap.app.error.FileLogger;
+import dsw.gerumap.app.error.ConsoleLogger;
+import dsw.gerumap.app.maprepository.MapRepositoryImplementation;
+import dsw.gerumap.app.message.MessageGeneratorImplemetation;
+import dsw.gerumap.app.serializer.GsonSerializer;
 
 public class AppCore  {
 

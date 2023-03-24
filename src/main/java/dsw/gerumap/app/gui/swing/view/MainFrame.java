@@ -2,12 +2,12 @@ package dsw.gerumap.app.gui.swing.view;
 
 import dsw.gerumap.app.core.ApplicationFramework;
 import dsw.gerumap.app.gui.swing.controller.ActionManager;
-import dsw.gerumap.app.gui.swing.maprepository.implementation.Project;
+import dsw.gerumap.app.maprepository.implementation.Project;
 import dsw.gerumap.app.gui.swing.tree.MapTree;
 import dsw.gerumap.app.gui.swing.tree.MapTreeImplementation;
 import dsw.gerumap.app.gui.swing.tree.model.MapTreeItem;
 import dsw.gerumap.app.gui.swing.tree.view.MapTreeView;
-import dsw.gerumap.app.gui.swing.workspace.ProjectView;
+import dsw.gerumap.app.gui.swing.workspace.view.ProjectView;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -29,12 +29,9 @@ public class MainFrame extends JFrame{
     private MapTreeView projectExplorer;
     private ProjectView projectView;
 
-    private  MainFrame () {
-
-    }
+    private  MainFrame () { }
 
     private void initialise () {
-
         actionManager = new ActionManager();
         mapTree = new MapTreeImplementation();
         projectView = new ProjectView();

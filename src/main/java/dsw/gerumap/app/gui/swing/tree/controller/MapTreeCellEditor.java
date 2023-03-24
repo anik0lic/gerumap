@@ -1,7 +1,7 @@
 package dsw.gerumap.app.gui.swing.tree.controller;
 
 import dsw.gerumap.app.core.ApplicationFramework;
-import dsw.gerumap.app.gui.swing.message.EventType;
+import dsw.gerumap.app.message.EventType;
 import dsw.gerumap.app.gui.swing.tree.model.MapTreeItem;
 
 import javax.swing.*;

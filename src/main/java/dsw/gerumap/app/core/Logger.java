@@ -1,6 +1,6 @@
 package dsw.gerumap.app.core;
 
-import dsw.gerumap.app.gui.swing.message.Message;
+import dsw.gerumap.app.message.Message;
 import dsw.gerumap.app.observer.Subscriber;
 
 import java.io.IOException;

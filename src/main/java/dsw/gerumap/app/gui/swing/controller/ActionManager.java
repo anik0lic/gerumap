@@ -1,7 +1,7 @@
 package dsw.gerumap.app.gui.swing.controller;
 
 
-import dsw.gerumap.app.state.controller.*;
+import dsw.gerumap.app.gui.swing.state.controller.*;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -19,7 +19,6 @@ public class ActionManager {
     private MoveStateAction moveStateAction;
     private SelectStateAction selectStateAction;
     private DeleteElementsAction deleteElementsAction;
-    private CentralTopicAction centralTopicAction;
     private ZoomInAction zoomInAction;
     private ZoomOutAction zoomOutAction;
     private EditAction editAction;
@@ -47,7 +46,6 @@ public class ActionManager {
         zoomInAction = new ZoomInAction();
         zoomOutAction = new ZoomOutAction();
         deleteElementsAction = new DeleteElementsAction();
-        centralTopicAction = new CentralTopicAction();
         editAction = new EditAction();
         undoAction = new UndoAction();
         redoAction = new RedoAction();

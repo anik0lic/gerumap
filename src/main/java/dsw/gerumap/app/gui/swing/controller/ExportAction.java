@@ -1,7 +1,7 @@
 package dsw.gerumap.app.gui.swing.controller;
 
 import dsw.gerumap.app.gui.swing.view.MainFrame;
-import dsw.gerumap.app.gui.swing.workspace.MapView;
+import dsw.gerumap.app.gui.swing.workspace.view.MapView;
 
 import javax.imageio.ImageIO;
 import javax.swing.*;

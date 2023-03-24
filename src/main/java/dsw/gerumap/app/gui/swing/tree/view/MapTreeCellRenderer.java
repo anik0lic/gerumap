@@ -1,9 +1,9 @@
 package dsw.gerumap.app.gui.swing.tree.view;
 
-import dsw.gerumap.app.gui.swing.maprepository.implementation.Element;
-import dsw.gerumap.app.gui.swing.maprepository.implementation.MindMap;
-import dsw.gerumap.app.gui.swing.maprepository.implementation.Project;
-import dsw.gerumap.app.gui.swing.maprepository.implementation.ProjectExplorer;
+import dsw.gerumap.app.maprepository.implementation.Element;
+import dsw.gerumap.app.maprepository.implementation.MindMap;
+import dsw.gerumap.app.maprepository.implementation.Project;
+import dsw.gerumap.app.maprepository.implementation.ProjectExplorer;
 import dsw.gerumap.app.gui.swing.tree.model.MapTreeItem;
 import lombok.NoArgsConstructor;
 

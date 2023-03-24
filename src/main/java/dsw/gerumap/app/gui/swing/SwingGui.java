@@ -2,7 +2,7 @@ package dsw.gerumap.app.gui.swing;
 
 import dsw.gerumap.app.core.Gui;
 import dsw.gerumap.app.gui.swing.commands.CommandManager;
-import dsw.gerumap.app.gui.swing.message.Message;
+import dsw.gerumap.app.message.Message;
 import dsw.gerumap.app.gui.swing.view.MainFrame;
 
 import javax.swing.*;

@@ -1,9 +1,9 @@
 package dsw.gerumap.app.gui.swing.controller;
 
 import dsw.gerumap.app.core.ApplicationFramework;
-import dsw.gerumap.app.gui.swing.maprepository.implementation.Project;
-import dsw.gerumap.app.gui.swing.maprepository.implementation.ProjectExplorer;
-import dsw.gerumap.app.gui.swing.message.EventType;
+import dsw.gerumap.app.maprepository.implementation.Project;
+import dsw.gerumap.app.maprepository.implementation.ProjectExplorer;
+import dsw.gerumap.app.message.EventType;
 import dsw.gerumap.app.gui.swing.tree.model.MapTreeItem;
 import dsw.gerumap.app.gui.swing.view.MainFrame;
 
