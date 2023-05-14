@@ -2,7 +2,6 @@ package dsw.gerumap.app.serializer;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
-import dsw.gerumap.app.core.Serializer;
 import dsw.gerumap.app.maprepository.composite.MapNode;
 import dsw.gerumap.app.maprepository.implementation.Project;
 

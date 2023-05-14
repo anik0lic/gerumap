@@ -1,6 +1,5 @@
 package dsw.gerumap.app.error;
 
-import dsw.gerumap.app.core.Logger;
 import dsw.gerumap.app.message.EventType;
 import dsw.gerumap.app.message.Message;
 

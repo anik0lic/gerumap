@@ -28,9 +28,13 @@ public class Project extends MapNodeComposite {
     public void addChild(MapNode child) throws IOException {
         if (child instanceof MindMap) {
             MindMap mindMap = (MindMap) child;
-            this.getChildren().add(mindMap);
-            notify(this);
-            changed = true;
+            if(!this.getChildren().contains(mindMap)) {
+                this.getChildren().add(mindMap);
+                child.setParent(this);
+
+                changed = true;
+                notify(this);
+            }
         }
     }
 
@@ -39,8 +43,8 @@ public class Project extends MapNodeComposite {
         if (child instanceof MindMap) {
             MindMap mindMap = (MindMap) child;
             this.getChildren().remove(mindMap);
-            notify(this);
             changed = true;
+            notify(this);
         }
     }
 

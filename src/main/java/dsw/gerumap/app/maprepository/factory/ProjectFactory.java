@@ -7,8 +7,9 @@ import lombok.NoArgsConstructor;
 
 @NoArgsConstructor
 public class ProjectFactory extends NodeFactory {
+    private static int num = 0;
     @Override
     public MapNode createNode(MapNode node) {
-        return new Project("Project " + ((ProjectExplorer) node).getChildren().size(), node);
+        return new Project("Project " + num++, node);
     }
 }

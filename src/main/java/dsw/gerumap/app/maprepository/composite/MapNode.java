@@ -41,7 +41,7 @@ public abstract class MapNode implements Publisher {
     }
 
     @Override
-    public void addSubs(Subscriber subscriber) {
+    public void addSubscriber(Subscriber subscriber) {
         if(subscriber == null)
             return;
         if(this.subscribers ==null)
@@ -52,7 +52,7 @@ public abstract class MapNode implements Publisher {
     }
 
     @Override
-    public void removeSubs(Subscriber subscriber) {
+    public void removeSubscriber(Subscriber subscriber) {
         if(subscriber == null || this.subscribers == null || !this.subscribers.contains(subscriber))
             return;
         this.subscribers.remove(subscriber);

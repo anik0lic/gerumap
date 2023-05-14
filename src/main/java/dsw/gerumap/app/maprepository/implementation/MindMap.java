@@ -1,10 +1,9 @@
 package dsw.gerumap.app.maprepository.implementation;
 
-import dsw.gerumap.app.gui.swing.commands.CommandManager;
 import dsw.gerumap.app.maprepository.composite.MapNode;
 import dsw.gerumap.app.maprepository.composite.MapNodeComposite;
-import dsw.gerumap.app.gui.swing.workspace.elements.Topic;
-import dsw.gerumap.app.gui.swing.workspace.elements.painters.ElementPainter;
+import dsw.gerumap.app.workspace.elements.Topic;
+import dsw.gerumap.app.workspace.elements.painters.ElementPainter;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -16,13 +15,11 @@ import java.util.List;
 @Setter
 public class MindMap extends MapNodeComposite {
 
-    private boolean template;
-//    private transient CommandManager commandManager;
+//    private boolean template;
     private transient List<ElementPainter> painterList;
 
     public MindMap(String name, MapNode parent) {
         super(name, parent);
-//        commandManager = new CommandManager();
         painterList = new ArrayList<>();
     }
 //    public MindMap(String name, MapNode parent, boolean template) {
@@ -32,21 +29,23 @@ public class MindMap extends MapNodeComposite {
 
     @Override
     public void addChild(MapNode child) throws IOException {
-        if (child != null && child instanceof Element) {
+        if (child instanceof Element) {
             Element element = (Element) child;
 //            if (!this.getChildren().contains(element)) {
 //                this.getChildren().add(element);
 //            }
             this.getChildren().add(element);
+            child.setParent(this);
             notify(this);
         }
     }
 
     @Override
     public void removeChild(MapNode child) throws IOException {
-        if (child != null && child instanceof Element) {
+        if (child instanceof Element) {
             Element element = (Element) child;
             this.getChildren().remove(element);
+            child.setParent(null);
             notify(this);
         }
     }

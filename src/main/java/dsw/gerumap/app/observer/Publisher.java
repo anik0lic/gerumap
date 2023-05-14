@@ -4,8 +4,8 @@ import java.io.IOException;
 
 public interface Publisher {
 
-    void addSubs(Subscriber subscriber);
-    void removeSubs(Subscriber subscriber);
+    void addSubscriber(Subscriber subscriber);
+    void removeSubscriber(Subscriber subscriber);
     void notify(Object notification) throws IOException;
 
 }

@@ -11,7 +11,7 @@ import java.io.IOException;
 @NoArgsConstructor
 @Getter
 @Setter
-public class Element extends MapNode {
+public abstract class Element extends MapNode {
     private Color color; // bilo transient
     private Color color2;
     private int stroke;
