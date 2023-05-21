@@ -30,8 +30,6 @@ public class AddConnectionCommand extends AbstractCommand {
 
     @Override
     public void doCommand() throws IOException {
-        System.out.println("do");
-        System.out.println(painter);
         if(painter == null){
             String name = t1.getName() + "-" + t2.getName();
             connection = new Connection(name, map, Color.BLACK, 2, t1);

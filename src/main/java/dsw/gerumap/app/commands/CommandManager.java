@@ -1,8 +1,10 @@
 package dsw.gerumap.app.commands;
 
 import dsw.gerumap.app.core.ApplicationFramework;
+import dsw.gerumap.app.view.frame.MainFrame;
 import lombok.Getter;
 
+import javax.swing.*;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
@@ -23,6 +25,7 @@ public class CommandManager {
     public void doCommand () throws IOException {
          if (currentCommand < commands.size()) {
              commands.get(currentCommand++).doCommand();
+             MainFrame.getInstance().getProjectExplorerTreeView().update(this);
 //             SwingUtilities.updateComponentTreeUI(MainFrame.getInstance().getMapTree().getTreeView());
              ApplicationFramework.getInstance().getGui().enableUndoAction();
          }
@@ -35,6 +38,7 @@ public class CommandManager {
         if (currentCommand > 0) {
             ApplicationFramework.getInstance().getGui().enableRedoAction();
             commands.get(--currentCommand).undoCommand();
+            MainFrame.getInstance().getProjectExplorerTreeView().update(this);
 //            SwingUtilities.updateComponentTreeUI(MainFrame.getInstance().getMapTree().getTreeView());
         }
 

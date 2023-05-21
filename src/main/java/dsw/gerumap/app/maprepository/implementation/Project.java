@@ -2,6 +2,7 @@ package dsw.gerumap.app.maprepository.implementation;
 
 import dsw.gerumap.app.maprepository.composite.MapNode;
 import dsw.gerumap.app.maprepository.composite.MapNodeComposite;
+import dsw.gerumap.app.view.frame.MainFrame;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -29,8 +30,8 @@ public class Project extends MapNodeComposite {
         if (child instanceof MindMap) {
             MindMap mindMap = (MindMap) child;
             if(!this.getChildren().contains(mindMap)) {
-                this.getChildren().add(mindMap);
                 child.setParent(this);
+                this.getChildren().add(mindMap);
 
                 changed = true;
                 notify(this);
@@ -43,6 +44,7 @@ public class Project extends MapNodeComposite {
         if (child instanceof MindMap) {
             MindMap mindMap = (MindMap) child;
             this.getChildren().remove(mindMap);
+            child.setParent(null);
             changed = true;
             notify(this);
         }

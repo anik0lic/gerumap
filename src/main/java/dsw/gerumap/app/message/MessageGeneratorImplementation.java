@@ -55,6 +55,10 @@ public class MessageGeneratorImplementation implements MessageGenerator {
                 return new Message("Please enter 1, 2 or 3 for stroke size", EventType.INVALID_SIZE, timestamp);
             case INVALID_NAME_SIZE:
                 return new Message("Please enter a name that has less than 10 characters", EventType.INVALID_NAME_SIZE, timestamp);
+            case OPEN_FAIL:
+                return new Message("Loading file failed", EventType.OPEN_FAIL, timestamp);
+            case SAVE_FAIL:
+                return new Message("Saving file failed", EventType.SAVE_FAIL, timestamp);
             default:
                 return null;
         }

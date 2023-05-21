@@ -26,6 +26,8 @@ public class MainFrame extends JFrame{
     private JToolBar toolbar;
     private JToolBar workToolbar;
     private MapTree mapTree;
+    private MapTreeView projectExplorerTreeView;
+    private ProjectExplorer projectExplorer;
     private ProjectView projectView;
 
     private MainFrame(){}
@@ -70,8 +72,8 @@ public class MainFrame extends JFrame{
             }
         });
 
-        ProjectExplorer projectExplorer = ApplicationFramework.getInstance().getMapRepository().getProjectExplorer();
-        MapTreeView projectExplorerTreeView = mapTree.generateTree(projectExplorer);
+        projectExplorer = ApplicationFramework.getInstance().getMapRepository().getProjectExplorer();
+        projectExplorerTreeView = mapTree.generateTree(projectExplorer);
         projectExplorer.addSubscriber(projectExplorerTreeView);
 
         JScrollPane scroll = new JScrollPane(projectExplorerTreeView);

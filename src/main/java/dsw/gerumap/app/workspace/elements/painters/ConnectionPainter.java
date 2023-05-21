@@ -6,6 +6,7 @@ import lombok.Getter;
 import lombok.Setter;
 
 import java.awt.*;
+import java.awt.geom.Ellipse2D;
 import java.awt.geom.Line2D;
 
 @Getter
@@ -21,11 +22,10 @@ public class ConnectionPainter extends ElementPainter {
         Connection connection = (Connection)super.getElement();
         connection.setNewCoordinates();
         Graphics2D graphics = (Graphics2D) g;
-        graphics.setColor(super.getElement().getColor());
+        graphics.setColor(Color.GRAY);
 
         Line2D.Float line = new Line2D.Float(connection.getXF(), connection.getYF(), connection.getXS(), connection.getYS());
         setS(line);
-
         graphics.draw(getS());
     }
 

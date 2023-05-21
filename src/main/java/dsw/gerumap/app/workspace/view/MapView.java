@@ -23,7 +23,6 @@ public class MapView extends JPanel implements Subscriber{
 
     public MapView(MindMap map, int index) {
         commandManager = new CommandManager();
-        setLayout(new BorderLayout());
 
         this.index = index;
         this.selectionModel = new MapSelectionModel();
@@ -39,6 +38,7 @@ public class MapView extends JPanel implements Subscriber{
 
     public void setMap(MindMap mindMap) {
         this.mindMap = mindMap;
+        this.mindMap.addSubscriber(this);
         updateTabName();
     }
 

@@ -27,8 +27,9 @@ public class OpenAction extends AbstractGeRuMapAction {
         if (jfc.showOpenDialog(MainFrame.getInstance()) == JFileChooser.APPROVE_OPTION) {
             try {
                 File file = jfc.getSelectedFile();
-                Project p = ApplicationFramework.getInstance().getSerializer().loadProject(file);
-                MainFrame.getInstance().getMapTree().loadProject(p);
+//                Project p = ApplicationFramework.getInstance().getSerializer().loadProject(file);
+//                MainFrame.getInstance().getMapTree().loadProject(p);
+                ApplicationFramework.getInstance().getSerializer().loadProject(file);
 
             } catch (Exception exception) {
                 exception.printStackTrace();

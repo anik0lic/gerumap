@@ -9,8 +9,8 @@ import java.io.IOException;
 
 public class AddTopicCommand extends AbstractCommand {
 
-    private MapView map;
-    private ElementPainter painter;
+    private final MapView map;
+    private final ElementPainter painter;
 
     public AddTopicCommand(MapView map, ElementPainter painter) {
         this.map = map;

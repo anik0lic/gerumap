@@ -14,18 +14,12 @@ import java.util.List;
 @Getter
 @Setter
 public class MindMap extends MapNodeComposite {
-
-//    private boolean template;
     private transient List<ElementPainter> painterList;
 
     public MindMap(String name, MapNode parent) {
         super(name, parent);
         painterList = new ArrayList<>();
     }
-//    public MindMap(String name, MapNode parent, boolean template) {
-//        super(name, parent);
-//        this.template = template;
-//    }
 
     @Override
     public void addChild(MapNode child) throws IOException {

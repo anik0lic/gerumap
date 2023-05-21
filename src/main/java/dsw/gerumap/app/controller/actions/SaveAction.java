@@ -26,7 +26,7 @@ public class SaveAction extends AbstractGeRuMapAction {
         if (!(MainFrame.getInstance().getMapTree().getSelectedNode().getMapNode() instanceof Project)) return;
 
         Project project = (Project) MainFrame.getInstance().getMapTree().getSelectedNode().getMapNode();
-        File projectFile;
+        File projectFile = null;
 
         if (!project.isChanged()) {
             return;
@@ -42,7 +42,7 @@ public class SaveAction extends AbstractGeRuMapAction {
 
         }
 
-        ApplicationFramework.getInstance().getSerializer().saveProject(project);
+        ApplicationFramework.getInstance().getSerializer().saveProject(projectFile);
 
         project.setChanged(false);
     }

@@ -33,8 +33,6 @@ public class ProjectView extends JPanel implements Subscriber, ChangeListener {
 
         setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
 
-//        add(lblNameAndAuthor, BorderLayout.NORTH);
-//        add(tabbedPane, BorderLayout.CENTER);
         add(lblNameAndAuthor);
         add(tabbedPane);
     }
@@ -56,7 +54,9 @@ public class ProjectView extends JPanel implements Subscriber, ChangeListener {
         if(!(project == null) && !(project.getSubscribers().isEmpty()))
             project.removeSubscriber(this);
 
-        project.addSubscriber(this);
+        if (project != null) {
+            project.addSubscriber(this);
+        }
 
         if (project == null) {
             tabbedPane.setVisible(false);
@@ -94,30 +94,6 @@ public class ProjectView extends JPanel implements Subscriber, ChangeListener {
         refreshTabs();
         updateLabel();
     }
-
-//    public void startTopicState() {
-//        this.stateManager.setTopicState();
-//    }
-//    public void startConnectionState() {
-//        this.stateManager.setConnectionState();
-//    }
-//    public void startMoveState() {
-//        this.stateManager.setMoveState();
-//    }
-//    public void startSelectState() {this.stateManager.setSelectionState();}
-
-//    public void misKliknut(int x, int y, MapView m) throws IOException {
-//        this.stateManager.getState().mousePressed(x, y, m, this);
-//    }
-//
-//    public void misOtpusten(int x, int y, MapView m) throws IOException {
-//        this.stateManager.getState().mouseReleased(x, y, m, this);
-//    }
-//
-//    public void misPovucen(int x, int y, MapView m) throws IOException {
-//        this.stateManager.getState().mouseDragged(x, y, m, this);
-//    }
-
     @Override
     public void stateChanged(ChangeEvent e) {
         selectedIndex = tabbedPane.getSelectedIndex();

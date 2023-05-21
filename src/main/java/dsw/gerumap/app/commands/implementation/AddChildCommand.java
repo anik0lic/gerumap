@@ -4,12 +4,12 @@ import dsw.gerumap.app.commands.AbstractCommand;
 import dsw.gerumap.app.maprepository.composite.MapNodeComposite;
 import dsw.gerumap.app.tree.model.MapTreeItem;
 
+import javax.swing.*;
 import java.io.IOException;
 
 public class AddChildCommand extends AbstractCommand {
-
-    private MapTreeItem parent;
-    private MapTreeItem child;
+    private final MapTreeItem parent;
+    private final MapTreeItem child;
 
     public AddChildCommand (MapTreeItem parent, MapTreeItem child) {
         this.parent = parent;

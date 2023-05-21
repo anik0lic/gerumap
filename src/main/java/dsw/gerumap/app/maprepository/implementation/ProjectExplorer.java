@@ -2,6 +2,7 @@ package dsw.gerumap.app.maprepository.implementation;
 
 import dsw.gerumap.app.maprepository.composite.MapNode;
 import dsw.gerumap.app.maprepository.composite.MapNodeComposite;
+import dsw.gerumap.app.observer.Subscriber;
 
 import java.io.IOException;
 
@@ -16,8 +17,9 @@ public class ProjectExplorer extends MapNodeComposite {
         if (child instanceof Project) {
             Project project = (Project) child;
             if(!this.getChildren().contains(project)) {
-                child.setParent(this);
                 this.getChildren().add(project);
+                child.setParent(this);
+
                 notify(this);
             }
         }
