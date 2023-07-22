@@ -1,5 +1,5 @@
 # GeRuMap
-GeruMap is simple Java application developed as a collaborative project at the university. It is a **Mind Map** creation application and the concept of Mind Maps is to help users visualize and structure their thoughts, ideas, and information. Framework used for this project is **Maven framework**.
+GeRuMap is simple Java application developed as a collaborative project at the university. It is a **Mind Map** creation application and the concept of Mind Maps is to help users visualize and structure their thoughts, ideas, and information. Framework used for this project is **Maven framework**.
 
 ## Design Patterns
 This project helped us to understand use of different design patterns. Design patterns we used are:
